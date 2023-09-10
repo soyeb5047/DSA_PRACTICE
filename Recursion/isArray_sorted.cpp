@@ -1,11 +1,19 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// int isSorted(int *a, int n)
+// {
+//     if(n == 1)
+//         return 1;
+//     return a[n - 1] < a[n - 2] ? 0 : isSorted(a, n - 1);
+// }
+
 int isSorted(int *a, int n)
 {
-    if(n == 1)
-        return 1;
-    return a[n - 1] < a[n - 2] ? 0 : isSorted(a, n - 1);
+    if(n == 1 || n == 0) return true;
+    if(a[0] > a[1]) return false;
+
+    return isSorted(a + 1, n - 1);
 }
 
 int main()

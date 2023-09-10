@@ -38,6 +38,9 @@ void sortArray(int *a, int n)
     //     count2--;
     // }
 
+
+    
+
     // using Dutch National flag algorithm(DNF)
     // time complexity O(logn)
 

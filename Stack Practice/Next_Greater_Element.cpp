@@ -28,7 +28,7 @@ vector<int> greaterNext(int *a, int n)
     // time complexity - O(n)
     for(int i = n - 1; i >= 0; i--)
     {
-        while(!st.empty() && a[i] > st.top())
+        while(!st.empty() && a[i] >= st.top())
         {
             st.pop();
         }

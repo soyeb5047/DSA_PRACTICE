@@ -1,33 +1,42 @@
 /*
-n = 4
-ans : 
+Right-Angled Triangle Pattern
 
-*
-* *
+Input Format: N = 3
+Result: 
+* 
+* * 
+* * *
+
+Input Format: N = 6
+Result:
+* 
+* * 
 * * *
 * * * *
-* * *
-* *
-*
+* * * * *
+* * * * * *
 
 */
-
 #include<bits/stdc++.h>
 using namespace std;
 
-int main()
+void pattern1(int n)
 {
-    int n;
-    cin >> n;
-
-    for(int i = 1; i <= 2 * n - 1; i++)         // if n = 4 so row no 7 the formula is 2 * 4 - 1
+    for(int i = 0; i < n; i++)
     {
-        int colNo = (n < i) ? 2 * n - i : i ;       // if row no 7 it is also greater than 4 and there has 1 star so formula is 2 * 4 - 7
-
-        for(int j = 1; j <= colNo; j++)
+        for(int j = 0; j <= i; j++)
         {
             cout << "* ";
         }
         cout << endl;
     }
+}
+
+int main()
+{
+    int n;
+    cout << "Enter the number : ";
+    cin >> n;
+
+    pattern1(n);
 }

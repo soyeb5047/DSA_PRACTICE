@@ -1,21 +1,13 @@
 /*
-Inverted Right Pyramid
-
+Reverse Letter Triangle Pattern
 Input Format: N = 3
 Result: 
-* * *
-* * 
-*
+A B C
+A B
+A
 
-Input Format: N = 6
-Result:
-* * * * * *
-* * * * * 
-* * * * 
-* * * 
-* * 
-* 
 */
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -25,7 +17,7 @@ void pattern(int n)
     {
         for (int j = 1; j <= n - i + 1; j++)
         {
-            cout << "*" << " ";
+            cout << (char)(65 + j - 1) << " ";
         }
         cout << endl;
     }
